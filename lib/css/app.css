@@ -241,7 +241,7 @@ body {
   text-align: center;
 }
 #about {
-  margin-bottom: 150px;
+  margin: 125px 0 275px;
 }
 #about h1 {
   font-weight: 300;
@@ -258,13 +258,6 @@ body {
   font-size: 30px;
   line-height: 35px;
   padding: 15px;
-  /*border-left: 10px solid #e2de61;
-        border-bottom: 10px solid #5490ba;
-        border-top: 1px solid #1d1d1d;
-        border-right: 1px solid #1d1d1d;*/
-
-  /*.box-shadow(inset 1px 1px 15px #111);*/
-
 }
 #services > div {
   position: relative;
@@ -342,53 +335,72 @@ body {
   overflow: hidden;
   padding: 20px 0;
 }
+#work .work-images {
+  position: relative;
+  z-index: 5;
+}
+#work .work-images a img {
+  -webkit-box-shadow: 2px 2px 2px #111111;
+  -moz-box-shadow: 2px 2px 2px #111111;
+  box-shadow: 2px 2px 2px #111111;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
 #work #work-1 {
-  background: url(../img/work-1-bg.jpg) center center;
+  background: url(../img/work/mvorg-bg.jpg) center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 #work #work-1 .work-filter {
-  background-color: rgba(0, 100, 0, 0.5);
+  background-color: rgba(99, 35, 82, 0.6);
+  background-image: -moz-linear-gradient(left, rgba(244, 179, 47, 0.6), rgba(99, 35, 82, 0.6));
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(244, 179, 47, 0.6)), to(rgba(99, 35, 82, 0.6)));
+  background-image: -webkit-linear-gradient(left, rgba(244, 179, 47, 0.6), rgba(99, 35, 82, 0.6));
+  background-image: -o-linear-gradient(left, rgba(244, 179, 47, 0.6), rgba(99, 35, 82, 0.6));
+  background-image: linear-gradient(to right, rgba(244, 179, 47, 0.6), rgba(99, 35, 82, 0.6));
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
-  background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
-  background-image: -o-linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
-  background-image: linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99f4b32f', endColorstr='#99632352', GradientType=1);
 }
 #work #work-2 {
-  background: url(../img/work-2-bg.jpg) center center;
+  background: url(../img/work/mvasports-bg.jpg) center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 #work #work-2 .work-filter {
-  background-color: rgba(0, 100, 0, 0.5);
+  background-color: rgba(245, 196, 61, 0.6);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(245, 196, 61, 0.6));
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0.9)), to(rgba(245, 196, 61, 0.6)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(245, 196, 61, 0.6));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(245, 196, 61, 0.6));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(245, 196, 61, 0.6));
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
-  background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
-  background-image: -o-linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
-  background-image: linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6000000', endColorstr='#99f5c43d', GradientType=1);
 }
 #work #work-3 {
-  background: url(../img/work-3-bg.jpg) center center;
+  background: url(../img/work/si-bg.jpg) center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 #work #work-3 .work-filter {
-  background-color: rgba(0, 100, 0, 0.5);
+  background-color: rgba(99, 35, 82, 0.5);
+  background-image: -moz-linear-gradient(left, rgba(238, 238, 238, 0.6), rgba(99, 35, 82, 0.5));
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(238, 238, 238, 0.6)), to(rgba(99, 35, 82, 0.5)));
+  background-image: -webkit-linear-gradient(left, rgba(238, 238, 238, 0.6), rgba(99, 35, 82, 0.5));
+  background-image: -o-linear-gradient(left, rgba(238, 238, 238, 0.6), rgba(99, 35, 82, 0.5));
+  background-image: linear-gradient(to right, rgba(238, 238, 238, 0.6), rgba(99, 35, 82, 0.5));
   background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
-  background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
-  background-image: -o-linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
-  background-image: linear-gradient(45deg, rgba(0, 0, 80, 0.5), rgba(0, 100, 0, 0.5));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99eeeeee', endColorstr='#80632352', GradientType=1);
 }
 #work #work-4 {
-  background: url(../img/work-4-bg.jpg) center center;
+  background: url(../img/work/cruyff-bg.jpg) center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -504,6 +516,9 @@ body {
   margin-bottom: 1px;
   font-size: 12px;
   line-height: 12px;
+}
+.rowbuffer {
+  margin-top: 20px;
 }
 /* Landscape phones and down */
 @media only screen and (min-width: 481px) {
