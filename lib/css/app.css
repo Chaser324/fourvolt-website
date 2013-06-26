@@ -44,6 +44,21 @@ body {
 }
 body {
   background: #f5f5f5;
+  padding: 0;
+}
+::selection,
+::-moz-selection {
+  background: #ff0000;
+  color: #f5f5f5;
+}
+.navbar.navbar-fixed-top {
+  position: fixed;
+  margin-left: 0;
+  margin-right: 0;
+}
+.navbar .btn-navbar {
+  position: relative;
+  z-index: 25;
 }
 .navbar .nav-logo {
   position: relative;
@@ -70,6 +85,7 @@ body {
   position: relative;
   z-index: 30;
   margin-top: 46px;
+  font-size: 12px;
 }
 .navbar ul.nav li a {
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
@@ -105,7 +121,7 @@ body {
   -moz-box-shadow: none;
   box-shadow: none;
   color: #f5f5f5;
-  font-weight: 400;
+  font-weight: 300;
 }
 .navbar ul.nav li.active a:hover {
   color: #f5f5f5;
@@ -154,6 +170,9 @@ body {
 .navbar.scrolled ul.nav li a.contact-link {
   padding: 4px 10px 3px;
 }
+.navbar.scrolled ul.nav li.active a {
+  color: #e2de61;
+}
 #home {
   position: relative;
   display: block;
@@ -181,14 +200,16 @@ body {
   padding-top: 200px;
   text-align: right;
   z-index: 2;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 #home #header-content h1 {
   display: inline-block;
   background: rgba(0, 0, 0, 0.8);
   color: #f5f5f5;
   font-weight: 300;
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 40px;
+  line-height: 40px;
   padding: 10px 10px;
 }
 #home #header-content h2 {
@@ -196,8 +217,8 @@ body {
   background: rgba(0, 0, 0, 0.7);
   color: #f5f5f5;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 15px;
   padding: 10px 10px;
 }
 #home #header-content p {
@@ -207,8 +228,8 @@ body {
   background: #5490ba;
   padding: 15px 18px 15px;
   color: #f5f5f5;
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 22px;
+  line-height: 28px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
   -webkit-box-shadow: -1px 1px 0px 0px #f5f5f5, -3px 3px 0px 0px #e2de61;
   -moz-box-shadow: -1px 1px 0px 0px #f5f5f5, -3px 3px 0px 0px #e2de61;
@@ -242,11 +263,18 @@ body {
 }
 #about {
   margin: 125px 0 275px;
+  color: #333333;
+  padding: 0 15px;
 }
 #about h1 {
   font-weight: 300;
   font-size: 50px;
   line-height: 50px;
+}
+#about h1 img {
+  height: 40px;
+  padding-bottom: 5px;
+  display: inline;
 }
 #about h3 {
   font-weight: 300;
@@ -268,9 +296,12 @@ body {
   line-height: 83px;
   font-weight: 800;
 }
+#services .text-wrap {
+  padding: 0 15px;
+}
 #services #design {
   position: relative;
-  background: #212880;
+  background: #1a347f;
   color: #f5f5f5;
   padding-bottom: 30px;
 }
@@ -286,7 +317,7 @@ body {
   position: relative;
   z-index: 15;
   padding: 50px 0 80px;
-  background: url(../img/services-design-bg.jpg) repeat top center;
+  background: url(../img/services-design-bg-2.jpg) repeat bottom center;
 }
 #services #design .bottom-edge {
   position: absolute;
@@ -347,6 +378,14 @@ body {
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
   transition: all 0.25s;
+}
+#work .work-images .span2 {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+#work .work-images .span2 img {
+  width: 90%;
 }
 #work #work-1 {
   background: url(../img/work/mvorg-bg.jpg) center center;
@@ -426,10 +465,16 @@ body {
 #work .work-text p {
   padding: 10px;
 }
+#work img {
+  width: 100%;
+}
 #testimonials {
   position: relative;
   background: #e0ddc6;
   overflow: hidden;
+}
+#testimonials .row {
+  padding: 0 15px;
 }
 #testimonials .tri {
   position: absolute;
@@ -468,15 +513,84 @@ body {
   font-size: 18px;
   line-height: 21px;
 }
+#contact {
+  padding: 40px 0 100px;
+}
+#contact form {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+#contact form h1 {
+  font-weight: 300;
+  color: #333333;
+}
+#contact form button {
+  margin-left: 0;
+}
+#contact form input,
+#contact form button,
+#contact form textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  -webkit-box-shadow: 2px 2px 10px #111111;
+  -moz-box-shadow: 2px 2px 10px #111111;
+  box-shadow: 2px 2px 10px #111111;
+}
+#contact form input:focus,
+#contact form button:focus,
+#contact form textarea:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#contact form label {
+  margin-bottom: 15px;
+  margin-top: -5px;
+  line-height: 14px;
+  color: #f5f5f5;
+}
+#contact form input.error {
+  border-color: #b94a48;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+#contact .button {
+  width: 100%;
+  text-align: center;
+  background: #111111;
+  color: #f5f5f5;
+  text-transform: uppercase;
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 35px;
+}
+#contact .button:hover {
+  background: #f5f5f5;
+  color: #111111;
+  text-decoration: none;
+}
+#contact-load {
+  font-size: 40px;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 5px #111111;
+}
+#contact-success {
+  color: #f5f5f5;
+  font-size: 40px;
+  font-weight: 800;
+}
 #footer {
   background: #1f1f1f;
-  padding: 70px 0 35px;
+  padding: 70px 15px 35px;
   font-weight: 300;
+  text-align: center;
 }
 #footer img.footer-brand {
   position: relative;
   opacity: 0.3;
-  width: 100%;
+  width: 30%;
   margin: 0 auto;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -526,14 +640,61 @@ body {
 }
 /* Landscape phone to portrait tablet */
 @media only screen and (min-width: 768px) {
-  
+  #home #header-content {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #about {
+    padding: 0;
+  }
+  #services .text-wrap {
+    padding: 0 0;
+  }
+  #work .work-images .span2 {
+    width: 104px;
+    text-align: left;
+  }
+  #work .work-images .span2 img {
+    width: 100%;
+  }
+  #testimonials .row {
+    padding: 0 0;
+  }
+  #footer {
+    padding: 70px 0 35px;
+  }
+  #footer img.footer-brand {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 980px) {
-  
+  .navbar ul.nav {
+    font-size: 14px;
+  }
+  #home #header-content h1 {
+    font-size: 50px;
+    line-height: 50px;
+    padding: 10px 10px;
+  }
+  #home #header-content h2 {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px 10px;
+  }
+  #home #header-content a {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 15px 18px 15px;
+  }
+  #work .work-images .span2 {
+    width: 140px;
+  }
 }
 /* Large desktop */
 @media (min-width: 1200px) {
-  
+  #work .work-images .span2 {
+    width: 170px;
+  }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   

@@ -44,6 +44,56 @@ import the mixins file so LESS can understand the variables.
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+#home #header-content {
+  padding-right: 0;
+  padding-left: 0;
+}
+#about {
+  padding: 0;
+}
+#services .text-wrap {
+  padding: 0 0;
+}
+#work .work-images .span2 {
+  width: 104px;
+  text-align: left;
+}
+#work .work-images .span2 img {
+  width: 100%;
+}
+#testimonials .row {
+  padding: 0 0;
+}
+#footer {
+  padding: 70px 0 35px;
+}
+#footer img.footer-brand {
+  width: 100%;
+}
+.navbar ul.nav {
+  font-size: 14px;
+}
+#home #header-content h1 {
+  font-size: 50px;
+  line-height: 50px;
+  padding: 10px 10px;
+}
+#home #header-content h2 {
+  font-size: 20px;
+  line-height: 20px;
+  padding: 10px 10px;
+}
+#home #header-content a {
+  font-size: 30px;
+  line-height: 40px;
+  padding: 15px 18px 15px;
+}
+#work .work-images .span2 {
+  width: 140px;
+}
+#work .work-images .span2 {
+  width: 170px;
+}
 /* 
 you can call the larger styles if you want, but there's really no need 
 */
