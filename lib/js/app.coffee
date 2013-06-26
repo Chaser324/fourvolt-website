@@ -1,6 +1,9 @@
 
 screenW = $("body").width()
 
+if screenW <= 767
+    $('.navbar').addClass 'scrolled'
+
 $(window).scroll ->
     pos = $(window).scrollTop()
     if pos >= 50 and screenW > 767

@@ -44,12 +44,34 @@ import the mixins file so LESS can understand the variables.
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+#home {
+  height: 100%;
+  min-height: 100%;
+}
 #home #header-content {
+  padding-top: 200px;
   padding-right: 0;
   padding-left: 0;
 }
 #about {
   padding: 0;
+  margin: 125px 0 275px;
+}
+#about h1 {
+  font-size: 50px;
+  line-height: 50px;
+}
+#about h3 {
+  font-size: 15px;
+  line-height: 15px;
+}
+#about p {
+  font-size: 30px;
+  line-height: 35px;
+}
+#services > div h1 {
+  font-size: 80px;
+  line-height: 83px;
 }
 #services .text-wrap {
   padding: 0 0;
