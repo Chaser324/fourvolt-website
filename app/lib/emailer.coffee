@@ -3,6 +3,7 @@
 emailer = require("nodemailer")
 fs      = require("fs")
 _       = require("underscore")
+userinfo = require("../userinfo")
 
 class Emailer
 
@@ -13,11 +14,11 @@ class Emailer
     constructor: (@options, @data)->
 
     send: (callback)->
+        console.log 'test: ' + JSON.stringify(@options)
         html = @getHtml(@options.template, @data)
-        attachments = @getAttachments(html)
         messageData =
-            to: "'#{@options.to.name} #{@options.to.surname}' <#{@options.to.email}>"
-            from: "'Myapp.com'"
+            to: "'#{@options.to.name} <#{@options.to.email}>"
+            from: "'fourvolt.com'"
             subject: @options.subject
             html: html
             generateTextFromHTML: true
@@ -28,8 +29,8 @@ class Emailer
         emailer.createTransport "SMTP",
         service: "Gmail"
         auth:
-            user: "myappemail@gmail.com"
-            pass: "secretpass"
+            user: userinfo.user
+            pass: userinfo.pass
 
     getHtml: (templateName, data)->
         templatePath = "./views/emails/#{templateName}.html"
