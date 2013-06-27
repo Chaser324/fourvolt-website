@@ -573,11 +573,11 @@ body {
 }
 #contact-load {
   font-size: 40px;
-  color: #f5f5f5;
+  color: #1d1d1d;
   text-shadow: 1px 1px 5px #111111;
 }
 #contact-success {
-  color: #f5f5f5;
+  color: #1d1d1d;
   font-size: 40px;
   font-weight: 800;
 }

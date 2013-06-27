@@ -9,8 +9,8 @@ contactSuccess = (responseText, statusText, xhr, $form) ->
     $('#contact-success').show()
 
 contactFail = (responseText, statusText, xhr, $form) ->
-    $j('#contact-load').hide();
-    $j('#contact-form').show();
+    $('#contact-load').hide()
+    $('#contact-form').show()
 
 
 screenW = $("body").width()
@@ -73,8 +73,8 @@ $(images).fancybox
 $('#contact-form').validate
     submitHandler: (form) ->
         $(form).ajaxSubmit
-            beforeSubmit: links.contactSubmit,
-            success: links.contactSuccess
+            beforeSubmit: contactSubmit,
+            success: contactSuccess
     rules:
         name: "required"
         email:

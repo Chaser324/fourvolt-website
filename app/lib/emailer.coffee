@@ -14,7 +14,6 @@ class Emailer
     constructor: (@options, @data)->
 
     send: (callback)->
-        console.log 'test: ' + JSON.stringify(@options)
         html = @getHtml(@options.template, @data)
         messageData =
             to: "'#{@options.to.name} <#{@options.to.email}>"

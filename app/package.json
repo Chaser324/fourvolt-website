@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "fourvolt",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,6 +7,9 @@
   },
   "dependencies": {
     "express": "3.3.0",
-    "jade": "*"
+    "jade": "*",
+    "underscore": "1.4.4",
+    "nodemailer": "0.4.4",
+    "coffee-script": "1.6.3"
   }
 }
