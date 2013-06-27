@@ -1,4 +1,18 @@
 
+contactSubmit = (formData, jqForm, options) ->
+    $('#contact-form').hide()
+    $('#contact-load').show()
+    return true
+
+contactSuccess = (responseText, statusText, xhr, $form) ->
+    $('#contact-load').hide()
+    $('#contact-success').show()
+
+contactFail = (responseText, statusText, xhr, $form) ->
+    $j('#contact-load').hide();
+    $j('#contact-form').show();
+
+
 screenW = $("body").width()
 
 if screenW <= 767
@@ -15,6 +29,7 @@ $(window).scroll ->
 
 $('.nav li a').click ->
     $('html, body').animate { scrollTop: $( $.attr(this, 'href') ).offset().top - 45 }, 400
+    $('.btn-navbar').click()
     return false
 
 if !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)
@@ -41,3 +56,29 @@ $(window).on "resize orientationchange", ->
         $('.navbar').addClass 'scrolled'
     else 
         $('.navbar').removeClass 'scrolled'
+
+images = $(".fancybox")
+$(images).fancybox
+    padding: 5
+    openEffect: 'elastic'
+    openSpeed: 150
+    closeEffect: 'elastic'
+    closeSpeed: 150
+    closeClick: true
+    helpers:
+        overlay:
+            css:
+                'background': 'rgba(0, 0, 0, 0.5)'
+
+$('#contact-form').validate
+    submitHandler: (form) ->
+        $(form).ajaxSubmit
+            beforeSubmit: links.contactSubmit,
+            success: links.contactSuccess
+    rules:
+        name: "required"
+        email:
+            required: true
+            email: true
+        comments: "required"
+    errorClass: "error"
