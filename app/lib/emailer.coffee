@@ -32,7 +32,7 @@ class Emailer
             pass: userinfo.pass
 
     getHtml: (templateName, data)->
-        templatePath = "./views/emails/#{templateName}.html"
+        templatePath = __dirname + "/../views/emails/#{templateName}.html"
         templateContent = fs.readFileSync(templatePath, encoding="utf8")
         _.template templateContent, data, {interpolate: /\{\{(.+?)\}\}/g}
 

@@ -20,7 +20,7 @@ if screenW <= 767
 
 $(window).scroll ->
     pos = $(window).scrollTop()
-    if pos >= 50 and screenW > 767
+    if pos >= 250 and screenW > 767
         $('.navbar').addClass 'scrolled'
     else if screenW <= 767
         $('.navbar').addClass 'scrolled'
@@ -32,13 +32,23 @@ $('.nav li a').click ->
     $('.btn-navbar').click()
     return false
 
+$('.footer-nav a').click ->
+    $('html, body').animate { scrollTop: $( $.attr(this, 'href') ).offset().top - 45 }, 400
+    return false
+
 if !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)
     window.onscroll = ->
         if screenW > 767
             n = Math.ceil $("body").scrollTop() / 2.0
+            sunPos = 150 - (n * 2.5)
             $('#header-content').css "-webkit-transform", "translateY(" + n + "px)"
             $('#header-content').css "-moz-transform", "translateY(" + n + "px)"
             $('#header-inner').css "top", "" + (n * 0.9) + "px"
+            $('#sun').css "bottom", "" + sunPos + "px"
+            if sunPos <= 50
+                $('#home').addClass 'night'
+            else
+                $('#home').removeClass 'night'
        
 if navigator.userAgent.match(/(iPad)/)
     document.ontouchmove = ->
