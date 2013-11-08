@@ -222,15 +222,42 @@ body {
     bottom: 10px;
 }
 
+
+
+
+
+
+@keyframes woman-anim {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -284px;
+    }
+}
+
+@-webkit-keyframes woman-anim {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -284px;
+    }
+}
+
+
 #woman {
     position: absolute;
     z-index: 6;
-    background: url(../img/woman.png);
+    background: url(../img/woman-anim.png);
     height: 168px;
-    width: 69px;
-    bottom: 105px;
+    width: 71px;
+    bottom: 108px;
     left: 50%;
     margin-left: -180px;
+
+    animation: woman-anim 1.5s steps(4) infinite;
+    -webkit-animation: woman-anim 1.5s steps(4) infinite;
 }
 
 #tree {

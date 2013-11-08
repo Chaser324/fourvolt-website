@@ -38,9 +38,9 @@ $('.footer-nav a').click ->
 
 if !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)
     window.onscroll = ->
-        if screenW > 767
+        if screenW > 767 and !$('body').hasClass('demo')
             n = Math.ceil $("body").scrollTop() / 2.0
-            sunPos = 150 - (n * 2.5)
+            sunPos = 150 - (n * 1.5)
             $('#header-content').css "-webkit-transform", "translateY(" + n + "px)"
             $('#header-content').css "-moz-transform", "translateY(" + n + "px)"
             $('#header-inner').css "top", "" + (n * 0.9) + "px"
@@ -49,10 +49,18 @@ if !navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)
                 $('#home').addClass 'night'
             else
                 $('#home').removeClass 'night'
+        else if $('body').hasClass('demo')
+            n = Math.ceil $("body").scrollTop() / 2.0
+            sunPos = 150 - (n * 1.5)
+            $('#sun').css "bottom", "" + sunPos + "px"
+            if sunPos <= 50
+                $('#home').addClass 'night'
+            else
+                $('#home').removeClass 'night'
        
 if navigator.userAgent.match(/(iPad)/)
     document.ontouchmove = ->
-        if screenW > 767
+        if screenW > 767 and !$('body').hasClass('demo')
             n = Math.ceil $("body").scrollTop() / 2.5
             $('#header-content').css "-webkit-transform", "translateY(-" + n + "px)"
             $('#header-inner').css "top", "-" + (n * 0.8) + "px"
