@@ -12,6 +12,8 @@ contactFail = (responseText, statusText, xhr, $form) ->
     $('#contact-load').hide()
     $('#contact-form').show()
 
+currentDate = new Date()
+$('.current-date').text currentDate.getFullYear()
 
 screenW = $("body").width()
 
